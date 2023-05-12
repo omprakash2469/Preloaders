@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Preloader */
+      .cell {
+        box-sizing: border-box;
+        background: transparent;
+        animation: preloader 1.5s ease infinite;
+      }
+
+      .cell.d-1 {
+        animation-delay: 100ms;
+      }
+
+      .cell.d-2 {
+        animation-delay: 200ms;
+      }
+
+      .cell.d-3 {
+        animation-delay: 300ms;
+      }
+
+      .cell.d-4 {
+        animation-delay: 400ms;
+      }
+
+      @keyframes preloader {
+        0% {
+          opacity: 0;
+        }
+        30% {
+          opacity: 0.4;
+        }
+        60% {
+          opacity: 0.8;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="preloader"
+      class="fixed inset-0 z-50 flex h-screen w-full items-center justify-center bg-black"
+    >
+      <div class="loader grid w-24 grid-cols-3">
+        <img loading="lazy" class="cell d-0" src="logo/1.jpg" alt="" />
+        <img loading="lazy" class="cell d-1" src="logo/2.jpg" alt="" />
+        <img loading="lazy" class="cell d-2" src="logo/3.jpg" alt="" />
+        <img loading="lazy" class="cell d-1" src="logo/4.jpg" alt="" />
+        <img loading="lazy" class="cell d-2" src="logo/5.jpg" alt="" />
+        <img loading="lazy" class="cell d-2" src="logo/6.jpg" alt="" />
+        <img loading="lazy" class="cell d-3" src="logo/7.jpg" alt="" />
+        <img loading="lazy" class="cell d-3" src="logo/8.jpg" alt="" />
+        <img loading="lazy" class="cell d-4" src="logo/9.jpg" alt="" />
+      </div>
+    </div>
+  </body>
+</html>
